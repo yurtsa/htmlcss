@@ -1,0 +1,50 @@
+.item{
+    padding: 20px;
+    background-color: #5681c2;
+    border-radius: 20px;
+    width: min-content;
+}
+
+.item_href{
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    color: aliceblue;
+}
+
+.item_href::before{
+    padding-right: 20px;
+    content: "\25C4";
+    color: aliceblue;
+    opacity: 0;
+    transition:0.5s ease-in-out;;
+}
+
+.item_href::after{
+    padding-left: 20px;
+    content: "\25BA";
+    color: aliceblue;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;;
+    transform: rotate(0deg);
+}
+
+.item:hover > .item_href::before{
+    opacity: 100;
+
+ }
+
+.item:hover > .item_href::after{
+    opacity: 100;
+}
+
+.item_href:hover::before{
+    display: inline-block;
+    transform: rotate(180deg);
+}
+
+
+.item_href:hover::after{;
+    display: inline-block;
+    transform: rotate(-180deg);
+}
