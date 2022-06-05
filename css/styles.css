@@ -1,84 +1,68 @@
-.item{
-    display:inline-block;
-    width:200px;
-    padding: 10px;
-    margin: 10px;
-    background-color: #5681c2;
-    border-radius: 10px;
+body{
+    font-family: 'Ubuntu', sans-serif;
+}
 
-    text-align: center;
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row{
+    margin: 0 -15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col{
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+.header-row{
+    justify-content: center;
+    align-items: stretch;
+}
+
+.cat{
+    min-width: 300px;
+    width: calc(100%/3 - 30px);
+    margin: 15px;
+    align-items: center;
+}
+
+.logo{
+    margin: 0 15px;
+}
+
+.cat_title{
+    font-size: 26px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.cat_content{
+    font-size: 14px;
+    line-height: 23px;
+    color: gray;
+    margin: 10px 0;
+    margin-bottom: 40px;
+    height: content-box;
+
+}
+
+.cat_button{
+    background-color: #1d9d73;
+    color: beige;
+    border-radius: 30px;
+    border: 0;
+    width: 200px;
+    height: 50px;
+    margin-bottom: 40px;
 }
 
 .img{
-    display: block;
-    width: 100%;
+    margin-left: 5px;
+    height: 68px;
+    max-width: 100%;
 }
 
-label{
-    display: block;
-    width: 100px;
-    border: #760000 1px solid;
-    background-color: darkred;
-    padding: 2px;
-    text-align: center;
-    color: aliceblue;
-    border-radius: 3px;
-    cursor: pointer;
-}
-
-input[type=checkbox]:checked ~.item{
-    display:block;
-}
-input[type=checkbox]:checked ~.item .img{
-    display: none;
-}
-input[type=checkbox]:checked + label{
-    background-color: #115000;
-    border: #083901 1px solid;
-}
-
-input[type=checkbox]:checked + label{
-    background-color: #115000;
-    border: #083901 1px solid;
-}
-.item_href{
-    display:inline-block;
-    font-weight: bold;
-    font-size: 20px;
-    color: aliceblue;
-    cursor: pointer;
-    margin: 10px
-}
-input[type=checkbox]:checked ~.item .item_href{
-    margin: 1px;
-}
-.item_href::after, .item_href::before{
-    padding-left: 20px;
-    padding-right: 20px;
-    color: aliceblue;
-    opacity: 0;
-    transition: all .5s ease;
-    display: inline-block;
-}
-
-.item_href::before{
-    content: "\25C4";
-}
-
-.item_href::after{
-    content: "\25BA";
-}
-
-.item:hover .item_href::before, .item:hover .item_href::after{
-    opacity: 100;
- }
-
-.item_href:hover::before{
-    transform: rotate(180deg);
-    padding-left: 3px;
-}
-
-.item_href:hover::after{
-    transform: rotate(-180deg);
-    padding-right: 3px;
-}
